@@ -1,0 +1,236 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Arial', sans-serif;
+ }
+
+ :root {
+     --primary-color: #FF6B00;
+     --secondary-color: #FFF3E0;
+     --bg-color: #ffffff;
+ }
+
+ body {
+     background-color: var(--bg-color);
+     color: #333;
+ }
+
+ .navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 5%;
+     background: var(--bg-color);
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ }
+
+
+ .telegram-button {
+     background: #0088cc;
+     color: white !important;
+     padding: 0.8rem 1.5rem;
+     border-radius: 25px;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     transition: transform 0.2s;
+ }
+
+ .telegram-button:hover {
+     transform: translateY(-2px);
+     background: #0077b3;
+ }
+
+ /* Секция социальных сетей */
+ .social-section {
+     padding: 3rem 5%;
+     text-align: center;
+     background: var(--secondary-color);
+ }
+
+ .social-grid {
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     margin-top: 2rem;
+     flex-wrap: wrap;
+ }
+
+ .social-link {
+     font-size: 2rem;
+     color: var(--primary-color);
+     transition: transform 0.2s;
+     text-decoration: none;
+ }
+
+ .social-link:hover {
+     transform: translateY(-5px);
+ }
+
+ @media (max-width: 768px) {
+     .telegram-button span {
+         display: none;
+     }
+     
+     .telegram-button {
+         padding: 0.8rem;
+     }
+ }
+
+ .logo {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: var(--primary-color);
+ }
+
+ .nav-links {
+     display: flex;
+     gap: 2rem;
+ }
+
+ .nav-links a {
+     text-decoration: none;
+     color: #333;
+     transition: color 0.3s;
+ }
+
+ .nav-links a:hover {
+     color: var(--primary-color);
+ }
+
+ .lang-switcher button {
+     margin-left: 1rem;
+     padding: 0.5rem 1rem;
+     border: 1px solid var(--primary-color);
+     background: transparent;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ /* Hero Section */
+ .hero {
+     text-align: center;
+     padding: 4rem 5%;
+     background: var(--secondary-color);
+ }
+
+ /* Sections */
+ .section {
+     padding: 3rem 5%;
+ }
+
+ .section-dark {
+     background: var(--secondary-color);
+ }
+
+ /* Roadmap */
+ .roadmap-steps {
+     display: grid;
+     gap: 2rem;
+     margin-top: 2rem;
+ }
+
+ .roadmap-step {
+     padding: 1.5rem;
+     background: white;
+     border-radius: 10px;
+     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+
+ /* Team */
+ .team-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 2rem;
+     margin-top: 2rem;
+ }
+
+ .team-member {
+     text-align: center;
+     padding: 1rem;
+ }
+
+ .team-member img {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-bottom: 1rem;
+ }
+
+ /* Mobile Styles */
+ @media (max-width: 768px) {
+     .nav-links {
+         display: none;
+     }
+
+     .hero h1 {
+         font-size: 2rem;
+     }
+
+     .team-grid {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ .ton-badge {
+     background: var(--primary-color);
+     color: white;
+     padding: 0.5rem 1rem;
+     border-radius: 20px;
+     display: inline-block;
+     margin: 1rem 0;
+ }
+
+ .cta-button {
+     display: inline-block; /* Для работы padding у ссылки */
+     text-decoration: none; /* Убираем подчеркивание */
+     background: var(--primary-color);
+     color: white;
+     padding: 1rem 2rem;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 1.1rem;
+     margin: 1rem 0;
+     transition: transform 0.2s;
+ }
+
+ .cta-button:hover {
+     transform: translateY(-2px);
+ }
+
+ h2 {
+     color: var(--primary-color);
+     margin-bottom: 1.5rem;
+     font-size: 2rem;
+ }
+ .fa-twitter{
+     font-family:sans-serif;
+ }
+ .fa-twitter::before{
+     content:"𝕏";
+     font-size:1.2em;
+ }   
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ /* Стили для активной ссылки */
+ .nav-links a.active {
+     color: var(--primary-color);
+     font-weight: bold;
+ }
+
+/* Отступ для секций чтобы навбар не перекрывал контент */
+section {
+    scroll-margin-top: 80px; /* Высота вашего навбара */
+}
